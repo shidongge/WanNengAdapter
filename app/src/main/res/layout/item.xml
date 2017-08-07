@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+    <!--android:descendantFocusability="blocksDescendants"
+    这句代码 放到有抢占焦点的Layout里面，
+    就可以不让View抢占焦点了
+    ListView 的条目就可以点击了
+    -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是标题"
+        android:textColor="#444"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="5dp"
+        android:text="啦啦啦啦啦"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="5dp"
+        android:text="2014-12-16"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="5dp"
+        android:background="#4f4"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="10086"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_id"
+        android:layout_width="48dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <CheckBox
+        android:id="@+id/cb_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_title"
+        android:visibility="gone" />
+    <!--android:focusable="false"
+    这句代码 放到有抢占焦点的View里面，
+    就可以不让这个View抢占焦点了
+    ListView 的条目就可以点击了
+    -->
+
+</RelativeLayout>
